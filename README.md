@@ -26,7 +26,7 @@ to use the filter in the home screen.
 
 The architecture used for this project is the Clean Architecture in order to separate the concerns of each layer 
 and keeping the communication between them through abstractions of it. As you can check/see that
-some SOLID principles where applied for the better understanding of each class/component such as 
+some __S.O.L.I.D.__ principles where applied for the better understanding of each class/component such as 
 __Single Responsibility__ and __Dependency Inversion__ in general.
 
 ## Project Structure
