@@ -3,6 +3,10 @@
 Requested by: Oswaldo Miguel Ortega Montero from Yape Recruitment Team
 Author: Joel Colmenares
 
+## Demo - Filtering
+Please, take a look to the __response-scheme.json__ file in order to know what ingredients and tags are made by 
+to use the filter in the home screen.
+
 ## Languages, libraries and tools used
 
 * __[Kotlin](https://developer.android.com/kotlin)__ - As main language.
@@ -55,7 +59,6 @@ You can run the app on a real device or an emulator.
 
 * __[Run on a real device](https://developer.android.com/training/basics/firstapp/running-app#RealDevice)__
 * __[Run on an emulator](https://developer.android.com/training/basics/firstapp/running-app#Emulator)__
-
 
 # Built With
 
