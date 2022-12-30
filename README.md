@@ -1,7 +1,6 @@
 # YapeTestChallenge
 
-Requested by: Oswaldo Miguel Ortega Montero from Yape Recruitment Team
-Author: Joel Colmenares
+Requested by Oswaldo Miguel Ortega Montero from Yape Recruitment Team and developed by Joel Colmenares
 
 ## Demo - Filtering
 Please, take a look to the __response-scheme.json__ file in order to know what ingredients and tags are made by 
