@@ -3,7 +3,7 @@
 Requested by Oswaldo Miguel Ortega Montero from Yape Recruitment Team and developed by Joel Colmenares
 
 ## Demo - Filtering
-Please, take a look to the __[response-scheme.json](https://github.com/jkhin/YapeCodeChallenge/blob/master/response-scheme.json)__ file in order to know what ingredients and tags are made by 
+Please, take a look to the `[response-scheme.json](https://github.com/jkhin/YapeCodeChallenge/blob/master/response-scheme.json)` file in order to know what ingredients and tags are made by 
 to use the filter in the home screen.
 
 ## Languages, libraries and tools used
