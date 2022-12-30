@@ -1,6 +1,6 @@
 # YapeTestChallenge
 
-Requested by Oswaldo Miguel Ortega Montero from Yape Recruitment Team and developed by Joel Colmenares
+Requested by Oswaldo Miguel Ortega Montero from Yape Recruitment Team and developed by (Joel Colmenares)[jkhin.cb@gmail.com]
 
 ## Languages, libraries and tools used
 
