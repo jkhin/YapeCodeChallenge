@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:chipMinHeight="@dimen/dp_24"
+    app:chipStrokeWidth="@dimen/dp_1"
+    app:chipStrokeColor="@color/color_state_stroke_recipe_item"
+    app:chipBackgroundColor="@color/color_state_background_recipe_item"
+    android:focusable="false" />
