@@ -7,6 +7,7 @@
     android:textAppearance="@style/ChipTextAppearanceSubtitle2"
     app:chipMinHeight="@dimen/dp_24"
     app:chipStrokeWidth="@dimen/dp_1"
+    app:rippleColor="@null"
     app:chipStrokeColor="@color/color_state_stroke_recipe_item"
     app:chipBackgroundColor="@color/color_state_background_recipe_item"
     android:focusable="false" />

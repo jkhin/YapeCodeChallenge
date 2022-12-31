@@ -41,6 +41,21 @@ val appModules by lazy {
         )
     )
 }
+
+val uiModule = module {
+    // UI section
+    viewModel { RecipesViewModel(get(), get(), get(), get()) }
+    single { RecipeModelMapper() }
+    single { RecipeDomainMapper() }
+}
+
+val domainModule = module {
+    // Domain section
+    single<GetRecipesUseCase> { GetRecipesUseCaseImp(get()) }
+    single<FilterRecipesUseCase> { FilterRecipesUseCaseImp() }
+}
+
+val dataModule = module {}
 val layersModule = module {
     // UI section
     viewModel { RecipesViewModel(get(), get(), get(), get()) }

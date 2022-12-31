@@ -1,23 +1,20 @@
 package jkcb.dev.labs.yape.test.ui.adapters
 
-import android.content.res.ColorStateList
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
-import androidx.core.widget.TextViewCompat.setTextAppearance
+import androidx.constraintlayout.widget.ConstraintSet.Motion
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.chip.Chip
 import jkcb.dev.labs.yape.test.R
-import jkcb.dev.labs.yape.test.databinding.ItemChipTagBinding
 import jkcb.dev.labs.yape.test.databinding.ItemListRecipeBinding
 import jkcb.dev.labs.yape.test.databinding.ItemRecipeChipTagBinding
 import jkcb.dev.labs.yape.test.ui.fragments.RecipesFragmentDirections
 import jkcb.dev.labs.yape.test.ui.models.RecipeModel
 import jkcb.dev.labs.yape.test.utils.setCornerSizes
-import com.google.android.material.R as materialR
 
 
 class RecipeRecyclerViewAdapter :
@@ -26,15 +23,6 @@ class RecipeRecyclerViewAdapter :
         RecipeDiffUtilCallback()
     ) {
 
-/*    fun filterRecipes(keyword: String): List<RecipeModel> {
-        return currentList.filter {
-            it.title.contains(keyword) or it.ingredients.filterByIngredient(keyword)
-        }
-    }
-
-    private fun List<String>.filterByIngredient(
-        keyword: String
-    ) = any { ingredient -> ingredient.contains(keyword) }*/
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -86,9 +74,6 @@ class RecipeRecyclerViewAdapter :
                 val tag = "#${label}"
                 text = tag
                 isClickable = false
-                isFocusable = false
-                isCheckable = false
-                setTextAppearance(R.style.ChipTextAppearanceSubtitle2)
             }
     }
 

@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.google.android.material.chip.Chip
 import jkcb.dev.labs.yape.test.R
 import jkcb.dev.labs.yape.test.databinding.FragmentDetailRecipeBinding
-import jkcb.dev.labs.yape.test.databinding.ItemChipTagBinding
+import jkcb.dev.labs.yape.test.databinding.ItemRecipeChipTagBinding
 import jkcb.dev.labs.yape.test.utils.setCornerSizes
 
 class DetailRecipeFragment : Fragment() {
@@ -73,8 +73,7 @@ class DetailRecipeFragment : Fragment() {
     }
 
     private fun createAndGetChip(label: String): Chip =
-        ItemChipTagBinding.inflate(layoutInflater).root.apply {
+        ItemRecipeChipTagBinding.inflate(layoutInflater).root.apply {
             text = label
-            setTextAppearance(R.style.ChipTextAppearanceSubtitle2)
         }
 }

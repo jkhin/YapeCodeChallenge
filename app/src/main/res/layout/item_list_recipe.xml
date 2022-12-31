@@ -40,10 +40,11 @@
             tools:text="Something real" />
 
         <HorizontalScrollView
+            android:id="@+id/svItemRecipesScrollTags"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:scrollbars="none"
-
+            android:clickable="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivItemRecipeImage"
@@ -55,6 +56,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="@dimen/dp_8"
                 android:paddingEnd="@dimen/dp_8"
+                android:clickable="false"
                 app:singleLine="true"
                 />
         </HorizontalScrollView>
