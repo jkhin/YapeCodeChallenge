@@ -9,7 +9,6 @@ import jkcb.dev.labs.yape.test.data.cloud.RecipesCloudDataSource
 import jkcb.dev.labs.yape.test.data.cloud.RecipesCloudDataSourceImp
 import jkcb.dev.labs.yape.test.data.cloud.api.RecipesService
 import jkcb.dev.labs.yape.test.data.local.RecipesDataSource
-import jkcb.dev.labs.yape.test.data.local.database.RecipesDao
 import jkcb.dev.labs.yape.test.data.local.database.RecipesDataBase
 import jkcb.dev.labs.yape.test.data.local.database.RecipesDataSourceImp
 import jkcb.dev.labs.yape.test.data.mappers.RecipeEntityMapper
@@ -23,7 +22,6 @@ import jkcb.dev.labs.yape.test.domain.usecases.GetRecipesUseCaseImp
 import jkcb.dev.labs.yape.test.ui.mappers.RecipeDomainMapper
 import jkcb.dev.labs.yape.test.ui.mappers.RecipeModelMapper
 import jkcb.dev.labs.yape.test.ui.viewmodels.RecipesViewModel
-import jkcb.dev.labs.yape.test.utils.RecipesEntityConverter
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
@@ -36,7 +34,9 @@ fun injectModules() = appModules
 val appModules by lazy {
     loadKoinModules(
         listOf(
-            layersModule,
+            uiModule,
+            domainModule,
+            dataModule,
             databaseModule
         )
     )
@@ -50,23 +50,11 @@ val uiModule = module {
 }
 
 val domainModule = module {
-    // Domain section
     single<GetRecipesUseCase> { GetRecipesUseCaseImp(get()) }
     single<FilterRecipesUseCase> { FilterRecipesUseCaseImp() }
 }
 
-val dataModule = module {}
-val layersModule = module {
-    // UI section
-    viewModel { RecipesViewModel(get(), get(), get(), get()) }
-    single { RecipeModelMapper() }
-    single { RecipeDomainMapper() }
-
-    // Domain section
-    single<GetRecipesUseCase> { GetRecipesUseCaseImp(get()) }
-    single<FilterRecipesUseCase> { FilterRecipesUseCaseImp() }
-
-    // Data section
+val dataModule = module {
     single<RecipesRepository> { RecipesRepositoryImpl(get(), get(), get(), get()) }
     single<RecipesCloudDataSource> { RecipesCloudDataSourceImp(get()) }
     single<RecipesDataSource> { RecipesDataSourceImp(get()) }
@@ -77,7 +65,6 @@ val layersModule = module {
     single { provideRetrofit(get()) }
     factory { providesGson() }
     factory { provideRecipeAPI(get()) }
-
 }
 
 val databaseModule = module {
